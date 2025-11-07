@@ -1,0 +1,155 @@
+/* Monotone minimalist theme: black, white, gray */
+
+:root {
+    --black: linear-gradient(to bottom, rgb(46, 46, 46), black);
+    --white: #fff;
+    --gray: #999;
+    --light-gray: #f2f2f2;
+}
+
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--black);
+    background: var(--white);
+}
+
+header {
+    position: relative;
+}
+
+a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: gray;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: black;
+    color: white;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.banner {
+    text-align: center;
+    background: var(--light-gray);
+    padding: 4rem 1rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--black);
+    margin-bottom: 1rem;
+}
+
+.banner {
+    background-image: url('images/banner.png');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-shadow: -2px 2px 2px black;
+}
+
+.banner button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+    outline: 1px solid white;
+}
+
+.banner button:hover {
+    background: var(--gray);
+}
+
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    width: 250px;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .nav-links {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --black: #ffffff;
+        --white: linear-gradient(to bottom, rgb(46, 46, 46), black);
+        --gray: #f2f2f2;
+        --light-gray: #999;
+    }
+}
